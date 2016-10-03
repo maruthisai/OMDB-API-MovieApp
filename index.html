@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="imdb">
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body ng-controller="controller">
+        <input type="text" placeholder="Search by movie name" ng-model="userinput">
+        <button ng-click="callSearch()">Search</button>
+        <div ng-if=details.Response>
+            <img src="{{details.Poster}}">
+            <div>Title: {{details.Title}}</div>
+            <div>Year: {{details.Year}}</div>
+            <div>Language: {{details.Language}}</div>
+            <div>Genre: {{details.Genre}}</div>
+            <div>Story: {{details.Plot}}</div>
+            <div>Director: {{details.Director}}</div>
+            <div>Cast: {{details.Actors}}</div>
+            <div>Rated: {{details.Rated}}</div>
+            <div>IMDB Rating: {{details.imdbRating}}</div>
+        </div>
+    </body>
+</html>
